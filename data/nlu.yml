@@ -18,6 +18,7 @@ nlu:
 - intent: informar_usuario
   examples: |
     - Meu nome é [João](nome_usuario)
+    - josue(nome_usuario)
     - Eu sou o [Alice](nome_usuario)
     - Nome: [Maria](nome_usuario)
 
