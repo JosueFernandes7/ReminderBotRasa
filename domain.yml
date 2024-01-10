@@ -1,0 +1,41 @@
+version: "3.1"
+
+entities:
+  - nome_tarefa
+  - nome_usuario
+actions:
+- action_salvar_tarefa
+
+slots:
+
+  nome_tarefa:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nome_tarefa
+  
+  nome_usuario:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: nome_usuario
+
+intents:
+  # - cumprimentar
+  - agendar_tarefa
+  - informar_tarefa
+  - informar_usuario
+
+responses:
+  utter_cumprimentar:
+  - text: "Hey! Como você está?"
+  utter_ask_nome_tarefa:
+  - text: "Informe o nome da tarefa: "
+  utter_ask_nome_usuario:
+  - text: "Informe o nome do usuário: "
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

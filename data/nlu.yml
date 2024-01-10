@@ -1,0 +1,28 @@
+version: "3.1"
+
+nlu:
+# - intent: cumprimentar
+#   examples: |
+#     - ola
+#     - oi
+#     - tudo bem?
+#     - hello
+- intent: agendar_tarefa
+  examples: |
+    - agendar
+    - marcar
+    - criar
+    - iniciar
+    - começar
+
+- intent: informar_usuario
+  examples: |
+    - Meu nome é [João](nome_usuario)
+    - Eu sou o [Alice](nome_usuario)
+    - Nome: [Maria](nome_usuario)
+
+- intent: informar_tarefa
+  examples: |
+    - A tarefa é [Limpar a casa](nome_tarefa)
+    - [Estudar](nome_tarefa) é o que eu preciso fazer
+    - Nome da tarefa: [Comprar mantimentos](nome_tarefa)

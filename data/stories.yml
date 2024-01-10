@@ -1,0 +1,20 @@
+version: "3.1"
+
+stories:
+
+- story: agendar tarefa
+  steps:
+  - intent: agendar_tarefa
+  - action: utter_ask_nome_tarefa
+  - intent: informar_tarefa
+    entities:
+    - nome_tarefa: "Nome da Tarefa"
+  - slot_was_set:
+    - nome_tarefa: "Nome da Tarefa"
+  - action: utter_ask_nome_usuario
+  - intent: informar_usuario
+    entities:
+    - nome_usuario: "Nome do Usuário"
+  - slot_was_set:
+    - nome_usuario: "Nome do Usuário"
+  - action: action_salvar_tarefa
